@@ -1,0 +1,176 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2024-06-27 10:48:34.950946",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "modified": "2024-06-27 18:44:28.559203",
+ "modified_by": "Administrator",
+ "module": "MRP Report",
+ "name": "BOM Cost",
+ "owner": "vikas.deshmukh@erpdata.in",
+ "prepared_report": 0,
+ "ref_doctype": "BOM",
+ "report_name": "BOM Cost",
+ "report_type": "Script Report",
+ "roles": [
+  {
+   "role": "Manufacturing Manager"
+  },
+  {
+   "role": "Manufacturing User"
+  },
+  {
+   "role": "Production Manager"
+  },
+  {
+   "role": "Academics User"
+  },
+  {
+   "role": "Accounts Manager"
+  },
+  {
+   "role": "Accounts User"
+  },
+  {
+   "role": "Agriculture Manager"
+  },
+  {
+   "role": "Agriculture User"
+  },
+  {
+   "role": "Analytics"
+  },
+  {
+   "role": "Auditor"
+  },
+  {
+   "role": "Blogger"
+  },
+  {
+   "role": "CEO"
+  },
+  {
+   "role": "Customer"
+  },
+  {
+   "role": "Dashboard Manager"
+  },
+  {
+   "role": "Employee"
+  },
+  {
+   "role": "Expense Approver"
+  },
+  {
+   "role": "Fleet Manager"
+  },
+  {
+   "role": "Fulfillment User"
+  },
+  {
+   "role": "Guest"
+  },
+  {
+   "role": "HR Manager"
+  },
+  {
+   "role": "HR User"
+  },
+  {
+   "role": "Inbox User"
+  },
+  {
+   "role": "Interviewer"
+  },
+  {
+   "role": "Item Manager"
+  },
+  {
+   "role": "Knowledge Base Contributor"
+  },
+  {
+   "role": "Knowledge Base Editor"
+  },
+  {
+   "role": "Leave Approver"
+  },
+  {
+   "role": "Loan Manager"
+  },
+  {
+   "role": "Maintenance Manager"
+  },
+  {
+   "role": "Maintenance User"
+  },
+  {
+   "role": "Newsletter Manager"
+  },
+  {
+   "role": "Prepared Report User"
+  },
+  {
+   "role": "Projects Manager"
+  },
+  {
+   "role": "Purchase Manager"
+  },
+  {
+   "role": "Purchase Master Manager"
+  },
+  {
+   "role": "Purchase User"
+  },
+  {
+   "role": "Quality Manager"
+  },
+  {
+   "role": "Report Manager"
+  },
+  {
+   "role": "Sales Manager"
+  },
+  {
+   "role": "Sales Master Manager"
+  },
+  {
+   "role": "Sales User"
+  },
+  {
+   "role": "Script Manager"
+  },
+  {
+   "role": "Stock User"
+  },
+  {
+   "role": "Supplier"
+  },
+  {
+   "role": "Support Team"
+  },
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Translator"
+  },
+  {
+   "role": "Website Manager"
+  },
+  {
+   "role": "Workspace Manager"
+  },
+  {
+   "role": "sales user new"
+  },
+  {
+   "role": "Extra Access for Quality Manager"
+  }
+ ]
+}
