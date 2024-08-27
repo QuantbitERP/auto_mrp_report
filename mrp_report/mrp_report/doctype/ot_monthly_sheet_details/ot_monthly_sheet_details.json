@@ -1,0 +1,132 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-08-01 16:44:19.731050",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "employee",
+  "employee_name",
+  "from_date",
+  "column_break_atu2z",
+  "ot_hrs",
+  "ot_amount",
+  "to_date",
+  "salary_details_section",
+  "b",
+  "hra",
+  "column_break_srobu",
+  "la",
+  "ca",
+  "da"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Employee",
+   "options": "Employee"
+  },
+  {
+   "fetch_from": "employee.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "ot_hrs",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "OT Hrs",
+   "precision": "2"
+  },
+  {
+   "fieldname": "ot_amount",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "OT Amount",
+   "precision": "2"
+  },
+  {
+   "fieldname": "column_break_atu2z",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "salary_details_section",
+   "fieldtype": "Section Break",
+   "label": "Salary Details"
+  },
+  {
+   "fieldname": "b",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Basic",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "hra",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "HRA",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "da",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "DA",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_srobu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "la",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "LA",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "ca",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "CA",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "From Date"
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "To Date"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-08-26 12:07:12.513108",
+ "modified_by": "Administrator",
+ "module": "MRP Report",
+ "name": "OT Monthly Sheet Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

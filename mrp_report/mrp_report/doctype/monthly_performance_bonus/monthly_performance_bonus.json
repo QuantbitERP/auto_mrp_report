@@ -1,0 +1,164 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{from_date}-to-{to_date}-{employee}",
+ "creation": "2024-08-13 16:26:03.784182",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "employee",
+  "column_break_a13pn",
+  "from_date",
+  "employee_name",
+  "column_break_piam4",
+  "to_date",
+  "performance_bonus",
+  "max_bonus",
+  "section_break_xf8pq",
+  "items",
+  "section_break_nmcjl",
+  "column_break_iuujn",
+  "column_break_kokaq",
+  "bonus_per",
+  "calculated_bonus",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Employee",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_a13pn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "From Date",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_piam4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "To Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_xf8pq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_nmcjl",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_iuujn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_kokaq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bonus_per",
+   "fieldtype": "Float",
+   "label": "Bonus %",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "calculated_bonus",
+   "fieldtype": "Float",
+   "label": "Calculated Bonus Amount",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Monthly Performance Bonus Details",
+   "options": "Monthly Performance Bonus Details"
+  },
+  {
+   "fetch_from": "company.custom_max_performance_bonus",
+   "fieldname": "max_bonus",
+   "fieldtype": "Float",
+   "label": "Max Bonus %",
+   "precision": "2"
+  },
+  {
+   "fetch_from": "employee.custom_bonus_amount",
+   "fieldname": "performance_bonus",
+   "fieldtype": "Float",
+   "label": "Employee Performance Bonus",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Monthly Performance Bonus",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-08-26 12:07:11.249489",
+ "modified_by": "Administrator",
+ "module": "MRP Report",
+ "name": "Monthly Performance Bonus",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1
+}

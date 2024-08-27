@@ -215,3 +215,19 @@ app_license = "MIT"
 # auth_hooks = [
 #	"mrp_report.auth.validate"
 # ]
+
+
+fixtures = [
+    {
+        "doctype": "Server Script",
+        "filters": [
+            ["name", "in", ["Add Overtime-Salary Slip"]],
+        ],
+    },
+     {
+        "doctype": "Workspace",
+        "filters": [
+            ["name", "in", ["Overtime and Performance"]],
+        ],
+    },
+]

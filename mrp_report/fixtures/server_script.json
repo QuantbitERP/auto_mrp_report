@@ -1,0 +1,18 @@
+[
+ {
+  "allow_guest": 0,
+  "api_method": null,
+  "cron_format": null,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Server Script",
+  "doctype_event": "After Save",
+  "event_frequency": "All",
+  "modified": "2024-08-26 14:18:41.795404",
+  "module": null,
+  "name": "Add Overtime-Salary Slip",
+  "reference_doctype": "Salary Slip",
+  "script": "if not doc.custom_overtime_added:\n    child_data = frappe.get_all(\"Payroll Employee Detail\", {\"parent\": doc.payroll_entry,\"employee\":doc.employee}, \"employee\")\n    # frappe.throw(str(child_data))\n    for i in child_data:\n        overtime_amount = frappe.db.get_value(\"OT Monthly Sheet Details\", {\"docstatus\":1,\"from_date\":doc.start_date,\"to_date\":doc.end_date,\"employee\":i.employee}, \"ot_amount\")\n        overtime_amount = float(overtime_amount) if overtime_amount is not None else 0.0\n        # frappe.msgprint(str(overtime_amount))\n        if overtime_amount:\n            for a in doc.earnings:\n                if a.salary_component == \"Overtime\":\n                    a.amount = float(overtime_amount)\n                    break\n            doc.custom_overtime_added = 1\n            doc.save()\n\nif not doc.custom_performace_bonus:\n    child_data = frappe.get_all(\"Payroll Employee Detail\", {\"parent\": doc.payroll_entry,\"employee\":doc.employee}, \"employee\")\n    for i in child_data:\n        bonus_amount = frappe.db.get_value(\"Monthly Performance Bonus\", {\"from_date\":doc.start_date,\"to_date\":doc.end_date,\"employee\":i.employee,\"docstatus\":1}, \"calculated_bonus\")\n        bonus_amount = float(bonus_amount) if bonus_amount is not None else 0.0\n        # frappe.msgprint(str(overtime_amount))\n        if bonus_amount:\n            for a in doc.earnings:\n                if a.salary_component == \"Performance Bonus\":\n                    a.amount = float(bonus_amount)\n                    break\n            doc.custom_performace_bonus = 1\n            doc.save()\n\n\n",
+  "script_type": "DocType Event"
+ }
+]
